@@ -76,20 +76,11 @@
     }
   
 /* --- Mobile Fixes --- */
-header img {
-  max-width: 48px;
-  height: auto;
-}
+
 header .font-bold {
   font-size: 1rem;
 }
-@media (max-width: 640px) {
-  header div.flex.items-center.gap-3 {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-}
+
 @media (max-width: 768px) {
   :root { --hero-height: auto; }
   .hero { padding-top: 2rem; padding-bottom: 2rem; }
@@ -169,44 +160,126 @@ input, select, textarea {
   }
 }
 
+/* Company Name */
+
+/* Slogan */
+header .text-xs.muted {
+  color: #00305a !important;    /* Same muted navy shade */
+  font-weight: 500;
+  opacity: 0.95;
+}
+
 </style>
 </head>
+
 <body class="antialiased text-gray-800 bg-white">
 
-  <!-- Header -->
-  <header class="bg-white shadow sticky top-0 z-40">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div>
-          <div class="font-bold text-lg" style="color:var(--navy-900)">Snehal SP Services Pvt. Ltd.</div>
-          <div class="text-xs muted">Smart Finance For A Better Future</div>
+  <!-- HEADER (Same as index) -->
+<header class="bg-white shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+    <!-- Logo + Slogan -->
+    <div>
+      <div class="font-bold text-lg" style="color:var(--navy-900)">Snehal SP Services Pvt. Ltd.</div>
+      <div class="text-xs" style="color:#00305a;opacity:0.95;font-weight:500;">
+        Smart Finance For A Better Future
+      </div>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden md:flex gap-6 text-sm" style="color:var(--navy-900)">
+      
+      <a href="https://www.snehalspservices.in/">Home</a>
+      <a href="/about">About</a>
+
+      <!-- SERVICES DROPDOWN -->
+      <div class="relative">
+        <button onmouseover="showDropdown('servicesMenu')" onmouseout="hideDropdown('servicesMenu')">
+          Services ▾
+        </button>
+
+        <div id="servicesMenu"
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('servicesMenu')"
+             onmouseout="hideDropdown('servicesMenu')">
+
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Personal Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Home Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Business Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Car Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Loan Against Property</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Credit Card Assistance</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Loan Against Car</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Transfer Home Loan</a>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#home" class="hover:text-blue-700" style="color:var(--navy-900)">Home</a>
-        <a href="#about" class="hover:text-blue-700" style="color:var(--navy-900)">About</a>
-        <a href="#services" class="hover:text-blue-700" style="color:var(--navy-900)">Services</a>
-        <a href="#contact" class="hover:text-blue-700" style="color:var(--navy-900)">Contact</a>
-        </nav>
-
-      <div class="md:hidden">
-        <button id="mobileToggle" aria-label="Open menu" class="p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/>
-          </svg>
+      <!-- INSURANCE DROPDOWN -->
+      <div class="relative">
+        <button onmouseover="showDropdown('insuranceMenu')" onmouseout="hideDropdown('insuranceMenu')">
+          Insurance ▾
         </button>
+
+        <div id="insuranceMenu"
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('insuranceMenu')"
+             onmouseout="hideDropdown('insuranceMenu')">
+
+          <a href="/insurance" class="block px-4 py-2 hover:bg-gray-100">Insurance Overview</a>
+          <a href="/life-insurance" class="block px-4 py-2 hover:bg-gray-100">Life Insurance</a>
+          <a href="/health-insurance" class="block px-4 py-2 hover:bg-gray-100">Health Insurance</a>
+          <a href="/general-insurance" class="block px-4 py-2 hover:bg-gray-100">General Insurance</a>
+        </div>
       </div>
-    </div>
-    <div id="mobileNav" class="hidden md:hidden bg-white border-t">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="#home" class="py-2">Home</a>
-        <a href="#about" class="py-2">About</a>
-        <a href="#services" class="py-2">Services</a>
-        <a href="#contact" class="py-2">Contact</a>
+
+      <a href="/contact">Contact</a>
+
+    </nav>
+
+
+    <!-- MOBILE TOGGLE -->
+    <button id="mobileToggle" class="md:hidden">
+      ☰
+    </button>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav" class="hidden md:hidden bg-white border-t">
+    <div class="px-4 py-3 flex flex-col gap-2">
+
+      <a href="https://www.snehalspservices.in/">Home</a>
+      <a href="/about">About</a>
+
+      <!-- MOBILE SERVICES MENU -->
+      <button onclick="toggleMenu('servicesMenuMobile')" class="flex justify-between items-center font-semibold">
+        Services <span id="servicesMenuMobileIcon">+</span>
+      </button>
+      <div id="servicesMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+        <a href="/services">Personal Loan</a>
+        <a href="/services">Home Loan</a>
+        <a href="/services">Business Loan</a>
+        <a href="/services">Car Loan</a>
+        <a href="/services">Loan Against Property</a>
+        <a href="/services">Credit Card Assistance</a>
+        <a href="/services">Loan Against Car</a>
+        <a href="/services">Transfer Home Loan</a>
       </div>
+
+      <!-- MOBILE INSURANCE MENU -->
+      <button onclick="toggleMenu('insuranceMenuMobile')" class="flex justify-between items-center font-semibold">
+        Insurance <span id="insuranceMenuMobileIcon">+</span>
+      </button>
+      <div id="insuranceMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+        <a href="/insurance">Insurance Overview</a>
+        <a href="/life-insurance">Life Insurance</a>
+        <a href="/health-insurance">Health Insurance</a>
+        <a href="/general-insurance">General Insurance</a>
+      </div>
+
+      <a href="/contact">Contact</a>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- Hero -->
   <section id="home" class="hero relative h-[var(--hero-height)] flex items-center">
@@ -224,7 +297,7 @@ input, select, textarea {
 
         <div class="bg-white/95 p-5 rounded-lg shadow-md" style="color:var(--navy-900)">
           <h3 class="font-semibold mb-3">Get Free Loan Consultation</h3>
-<p class="text-sm text-gray-600 mb-3">Our experts will call you to discuss best offers for your needs.</p>
+<p class="text-sm text-gray-700 mb-3">Our experts will call you to discuss best offers for your needs.</p>
           <form id="heroForm" class="space-y-3">
             <input name="name" placeholder="Full name" class="w-full p-3 rounded border" />
             <input name="mobile" placeholder="Mobile (e.g. +91 9XXXXXXXXX)" class="w-full p-3 rounded border" />
@@ -256,7 +329,7 @@ input, select, textarea {
         <p class="text-gray-700">Snehal SP Services Pvt. Ltd. helps customers across Aurangabad and India access tailored loan options from multiple reputed lenders. We simplify documentation, speed up application processing and negotiate the best offers so you save on EMIs.</p>
         <ul class="mt-4 space-y-2 text-gray-600">
           <li>✔ 30+ partner lenders</li>
-          <li>✔ 1000+ successful loan disbursals</li>
+          <li>✔ 15000+ successful loan disbursals</li>
           <li>✔ Quick approval & disbursal process</li>
           <li>✔ Transparent advice & lowest-rate comparisons</li>
         </ul>
@@ -277,180 +350,109 @@ input, select, textarea {
   <section id="services" class="bg-gray-50 py-10">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl font-bold text-center mb-6" style="color:var(--navy-900)">Our Services</h2>
-
-      <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-2 gap-6">
         <!-- Repeat: service card -->
         <!-- Personal Loan -->
-        <article class="service-card rounded-lg p-5">
-          <div class="flex justify-between items-start gap-4">
+          <article class="service-card rounded-lg p-5 h-full">
+             <div class="flex justify-between items-start gap-4">
             <div>
               <h3 class="font-semibold text-lg" style="color:var(--navy-900)">Personal Loan</h3>
               <p class="text-sm muted mt-1">Fast sanctions with competitive rates. No end-use restriction.</p>
-              <p class="mt-2 text-xs muted">Amount: Up to ₹40L | Tenure: Up to 5 years</p>
             </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('personalDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Personal Loan')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="personalDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <h4 class="font-semibold" style="color:var(--navy-900)">Key features</h4>
-            <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
-              <li>Quick processing & minimal documentation</li>
-              <li>Instant disbursement if pre-approved</li>
-              <li>Balance transfer options available</li>
-            </ul>
-
-            <div class="mt-4">
-              <h5 class="font-semibold" style="color:var(--navy-900)">Documents (basic)</h5>
-              <p class="text-sm text-gray-700">PAN, Aadhar, 6 months bank statements, 3 months salary slips, passport photo, address proof. Lender-specific additional docs may apply.</p>
-            </div>
-          </div>
         </article>
 
         <!-- Home Loan -->
-        <article class="service-card rounded-lg p-5">
-          <div class="flex justify-between items-start gap-4">
+          <article class="service-card rounded-lg p-5 h-full">
+            <div class="flex justify-between items-start gap-4">
             <div>
               <h3 class="font-semibold text-lg" style="color:var(--navy-900)">Home Loan</h3>
               <p class="text-sm muted mt-1">Finance purchase, construction or renovation with long tenures and low interest rates.</p>
-              <p class="mt-2 text-xs muted">Tenure: Up to 30 years</p>
             </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('homeDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Home Loan')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="homeDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <p class="text-gray-700">Suitable for purchase, construction, or transfer. Balance-transfer options available to lower EMIs.</p>
-
-            
-          </div>
         </article>
 
         <!-- Transfer Home Loan -->
-        <article class="service-card rounded-lg p-5">
+        <article class="service-card rounded-lg p-5 h-full">
           <div class="flex justify-between items-start gap-4">
             <div>
               <h3 class="font-semibold text-lg" style="color:var(--navy-900)">Transfer Home Loan</h3>
               <p class="text-sm muted mt-1">Refinance your existing loan to reduce rate or EMI — we compare lenders to save you money.</p>
             </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('transferDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Transfer Home Loan')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="transferDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <p class="text-gray-700">We assess your current rate, outstanding amount and tenure then find the best lender for transfer or consolidation.</p>
-          </div>
         </article>
 
         <!-- Loan Against Property -->
-        <article class="service-card rounded-lg p-5">
+        <article class="service-card rounded-lg p-5 h-full">
           <div class="flex justify-between items-start gap-4">
             <div>
               <h3 class="font-semibold text-lg" style="color:var(--navy-900)">Loan Against Property</h3>
               <p class="text-sm muted mt-1">Get higher loan amounts by mortgaging residential or commercial property.</p>
             </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('lapDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Loan Against Property')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="lapDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <p class="text-gray-700">Loan amounts depend on LTV and property type; tenures up to 15 years. Ideal for large business or personal needs.</p>
-          </div>
         </article>
 
         <!-- Business Loan -->
-        <article class="service-card rounded-lg p-5">
+        <article class="service-card rounded-lg p-5 h-full">
           <div class="flex justify-between items-start gap-4">
             <div>
               <h3 class="font-semibold text-lg" style="color:var(--navy-900)">Business Loan</h3>
               <p class="text-sm muted mt-1">Working capital, expansion, machinery purchase — tailored for SMEs and startups.</p>
             </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('businessDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Business Loan')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="businessDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <p class="text-gray-700">Offers for both secured and unsecured business loans. We work with NBFCs and banks for faster disbursal.</p>
-          </div>
         </article>
 
         <!-- Car Loan -->
-        <article class="service-card rounded-lg p-5">
+        <article class="service-card rounded-lg p-5 h-full">
           <div class="flex justify-between items-start gap-4">
             <div>
               <h3 class="font-semibold text-lg" style="color:var(--navy-900)">New / Used Car Loan</h3>
               <p class="text-sm muted mt-1">Finance new or used cars with flexible tenures and low downpayments.</p>
             </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('carDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Car Loan')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="carDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <p class="text-gray-700">Loan-to-value depends on age for used cars. Competitive rates from auto-finance lenders.</p>
-          </div>
         </article>
 
-        <!-- Credit Card Assistance -->
-        <article class="service-card rounded-lg p-5">
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <h3 class="font-semibold text-lg" style="color:var(--navy-900)">Credit Card Assistance</h3>
-              <p class="text-sm muted mt-1">Compare card features — rewards, fuel/EMI conversion, travel benefits — and apply with guidance.</p>
-            </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('cardDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Credit Card Assistance')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="cardDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <p class="text-gray-700">We shortlist cards matching your spend and suggest the best fit based on rewards and fees.</p>
-          </div>
-        </article>
-
-        <!-- Loan Against Car -->
-        <article class="service-card rounded-lg p-5">
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <h3 class="font-semibold text-lg" style="color:var(--navy-900)">Loan Against Car</h3>
-              <p class="text-sm muted mt-1">Get secured loans using your vehicle. Fast processing and flexible repayment.</p>
-            </div>
-            <div class="flex flex-col gap-2 items-end">
-              <button onclick="toggleDetails('lacDetails')" class="text-sm text-blue-600">Details</button>
-              <button onclick="openApplyModal('Loan Against Car')" class="btn-primary text-sm">Check & Apply</button>
-            </div>
-          </div>
-
-          <div id="lacDetails" class="mt-4 hidden">
-            <hr class="my-3" />
-            <p class="text-gray-700">Loan amount depends on car make, model and age. Shorter tenures than LAP but quicker disbursal.</p>
-          </div>
-        </article>
-
+       <!-- VIEW ALL SERVICES BUTTON -->
+      <div class="mt-10">
+        <a href="/services" class="btn-primary px-8 py-3 rounded-lg text-white font-semibold inline-block">
+        View All Services
+        <span>→</span>
+        </a>
       </div>
+
     </div>
   </section>
 
-  
+  <!-- Reviews Section -->
+
+<section class="py-10 md:py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+
+    <h2 class="text-3xl font-bold text-center mb-10" style="color:#001f3f">
+      What Our Clients Say
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-gray-50 shadow rounded-xl p-6">
+        <p class="text-gray-700 italic">
+          “Best loan consultants in Aurangabad. They helped me transfer my home loan."
+        </p>
+        <h4 class="font-semibold mt-4" style="color:#001f3f">— Hemant Gujar</h4>
+      </div>
+
+      <div class="bg-gray-50 shadow rounded-xl p-6">
+        <p class="text-gray-700 italic">
+          “Very fast service, I got my personal loan approved within 48 hours. Team guided me at every step. Highly recommended!”
+        </p>
+        <h4 class="font-semibold mt-4" style="color:#001f3f">— Akash Chavanskar</h4>
+      </div>
+
+      <div class="bg-gray-50 shadow rounded-xl p-6">
+        <p class="text-gray-700 italic">
+          “Professional service and transparent process. Got my business loan approved with minimal documentation.”
+        </p>
+        <h4 class="font-semibold mt-4" style="color:#001f3f">— Aman Jamadar</h4>
+      </div>
+
+    </div>
+</div>
+</section>
+
 <!-- FAQs -->
 <section id="faqs" class="bg-[#f8fbff] py-12 border-t">
   <div class="max-w-6xl mx-auto px-4">
@@ -593,20 +595,84 @@ input, select, textarea {
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[color:var(--navy-900)] text-white py-6 mt-10">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div>
-        Snehal SP Services Pvt. Ltd © <span id="year"></span> • All rights reserved.
-      </div>
-      <div class="text-sm">
-        <a href="#services" class="mr-4">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
 
-  <!-- Floating Chat with Advisor -->
-  <a href="https://wa.me/+91 9112003366" target="_blank" class="hidden md:flex fixed right-4 bottom-4 z-50">
+  <footer class="bg-[#001f3f] text-white pt-12 pb-6 mt-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+
+      <div>
+        <h3 class="font-semibold text-xl mb-3">Snehal SP Services Pvt. Ltd.</h3>
+        <p class="text-gray-300 text-sm leading-6">
+          We help customers with Personal, Business, Home, Mortgage & Car Loans
+          through 30+ Banks & NBFCs. Fast, transparent & trusted loan consultancy.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li><a href="https://www.snehalspservices.in/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/services" class="hover:text-white">Services</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+          <li><a href="/insurance" class="hover:text-white">Insurance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Loan Services</h4>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li>Personal Loan</li>
+          <li>Home Loan</li>
+          <li>Business Loan</li>
+          <li>Car Loan</li>
+          <li>Loan Against Property</li>
+          <li>Credit Card Assistance</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+        <p class="text-gray-300 text-sm leading-6">
+          Eldora Building, Golden City Center,<br>
+          Chikalthana, Plot No. P-79, Shop No.163,<br>
+          Aurangabad, Maharashtra 431001
+        </p>
+
+        <p class="mt-3">
+          <a href="tel:+919112003366" class="hover:text-white text-gray-300 text-sm">
+            +91 9112003366
+          </a>
+        </p>
+
+        <p class="mt-1">
+          <a href="mailto:prakash.kakulte@snehalspservices.in"
+             class="hover:text-white text-gray-300 text-sm">
+            prakash.kakulte@snehalspservices.in
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/20 mt-10 pt-4 text-center text-sm text-gray-300">
+      <span>© 2025 Snehal SP Services Pvt. Ltd.</span>
+      <span>|</span>
+
+      <a href="/privacy" class="hover:text-white">Privacy Policy</a>
+      <span>|</span>
+
+      <a href="/terms" class="hover:text-white">Terms & Conditions</a>
+      <span>|</span>
+
+      <a href="/disclaimer" class="hover:text-white">Disclaimer</a>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- Floating Chat with Advisor -->
+  <a href="https://wa.me/919112003366" target="_blank" class="hidden md:flex fixed right-4 bottom-4 z-50">
     <div class="bg-green-600 p-3 rounded-full shadow-lg flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 1a11.9 11.9 0 0 0-8.5 2.5A11.9 11.9 0 0 0 1 12c0 2 .5 3.9 1.5 5.6L1 23l5.6-1.5A11.9 11.9 0 0 0 12 23c2 0 3.9-.5 5.6-1.5A11.9 11.9 0 0 0 23 12c0-3.2-1.3-6.2-3.5-8.5zM12 20c-1.5 0-3-.3-4.5-.9l-.3-.1-3.3.9.9-3.1-.1-.3C4 14 3.7 13 3.7 12c0-4.6 3.8-8.4 8.4-8.4S20.5 7.4 20.5 12 16.6 20 12 20zm1.5-7.2c-.1-.2-.5-.3-1.1-.6-.6-.2-1-.4-1.5.4-.6.9-1.4 1-2 .8-.1-.2-.9-.8-1.6-1.2-.6-.4-.8-.8.3-1.6.9-.6 1.4-1.2 1.5-1.9.1-.7-.3-1-.9-1.3-.6-.3-1.4-.5-2.2-.6-.7-.1-1.6.1-2.3.8-.7.7-1.5 1.8-1.5 3.3 0 1.5.9 3 1.9 4.1 1 1.1 2.1 1.6 3.6 2.1 1.5.4 2.7.5 3.6.4.9-.1 2.7-1.1 3-2 .3-.9.3-1.6.2-1.8z"/></svg>
     </div>
@@ -640,8 +706,14 @@ input, select, textarea {
         <input name="city" placeholder="City" class="p-3 border rounded" />
         <input name="amount" placeholder="Loan Amount Required (₹)" class="p-3 border rounded" />
         <div class="md:col-span-2">
-          <label class="text-sm muted">By submitting this form, you agree to the <a href="#" style="color:var(--navy-800)">Privacy Policy</a> & <a href="#" style="color:var(--navy-800)">Terms of Use</a>.</label>
-        </div>
+          <label class="text-sm muted">By submitting this form, you agree to the <a href="privacy.html" target="_blank" rel="noopener" style="color:var(--navy-800); text-decoration:underline;">
+           Privacy Policy
+          &amp;
+           <a href="terms.html" target="_blank" rel="noopener" style="color:var(--navy-800); text-decoration:underline;">
+          Terms of Use
+           </a>
+         </label>
+      </div>
        <button type="submit" class="btn-primary md:col-span-2">Request Consultation</button>
      </form>
     </div>
@@ -710,6 +782,84 @@ document.querySelectorAll('#mobileNav a').forEach(link => {
   </svg>
   Chat with Advisor
 </a>
+
+<script>
+// Desktop dropdowns
+function showDropdown(id){
+  document.getElementById(id)?.classList.remove("hidden");
+}
+function hideDropdown(id){
+  document.getElementById(id)?.classList.add("hidden");
+}
+
+// Mobile submenu toggle (+ turns into -)
+function toggleMenu(id){
+  const menu = document.getElementById(id);
+  const icon = document.getElementById(id + "Icon");
+
+  menu.classList.toggle("hidden");
+  if (icon){
+    icon.textContent = menu.classList.contains("hidden") ? "+" : "-";
+  }
+}
+</script>
+
+<!-- Success Popup -->
+<div id="successPopup"
+     class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50">
+  <div class="bg-white rounded-xl max-w-md w-full mx-4 p-6 text-center shadow-lg">
+    <div class="text-green-600 text-3xl mb-2">✅</div>
+    <h3 class="text-xl font-semibold mb-2">Thank You!</h3>
+    <p class="text-gray-600 mb-4">
+      Your enquiry has been submitted successfully.<br>
+      Our advisor will contact you shortly.
+    </p>
+    <button onclick="closeSuccessPopup()"
+            class="btn-primary px-6 py-2">
+      OK
+    </button>
+  </div>
+</div>
+
+<script>
+const applyForm = document.getElementById("applyForm");
+
+applyForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop redirect
+
+  const formData = new FormData(applyForm);
+
+  fetch(applyForm.action, {
+    method: "POST",
+    body: formData,
+    headers: { "Accept": "application/json" }
+  })
+  .then(response => {
+    if (response.ok) {
+      applyForm.reset();
+      closeApplyModal();
+      showSuccessPopup();
+    } else {
+      alert("❌ Submission failed. Please try again.");
+    }
+  })
+  .catch(() => {
+    alert("❌ Network error. Please try again.");
+  });
+});
+
+function showSuccessPopup() {
+  const popup = document.getElementById("successPopup");
+  popup.classList.remove("hidden");
+  popup.style.display = "flex";
+}
+
+function closeSuccessPopup() {
+  const popup = document.getElementById("successPopup");
+  popup.classList.add("hidden");
+  popup.style.display = "none";
+}
+</script>
 
 </body>
 </html>

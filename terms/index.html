@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions — Snehal SP Services Pvt. Ltd.</title>
+  <meta name="description" content="Terms & Conditions of Snehal SP Services Pvt. Ltd.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --navy-900:#001f3f; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header class="bg-white shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div>
+          <div class="font-bold text-lg" style="color:var(--navy-900)">Snehal SP Services Pvt. Ltd.</div>
+          <div class="text-xs muted">Smart Finance For A Better Future</div>
+        </div>
+      </div>
+      
+    <!-- DESKTOP NAV -->
+    <nav class="hidden md:flex gap-6 text-sm" style="color:var(--navy-900)">
+      
+      <a href="https://www.snehalspservices.in/">Home</a>
+      <a href="/about">About</a>
+
+      <!-- SERVICES DROPDOWN -->
+      <div class="relative">
+        <button onmouseover="showDropdown('servicesMenu')" onmouseout="hideDropdown('servicesMenu')">
+          Services ▾
+        </button>
+
+        <div id="servicesMenu"
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('servicesMenu')"
+             onmouseout="hideDropdown('servicesMenu')">
+
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Personal Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Home Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Business Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Car Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Loan Against Property</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Credit Card Assistance</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Loan Against Car</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Transfer Home Loan</a>
+        </div>
+      </div>
+
+      <!-- INSURANCE DROPDOWN -->
+      <div class="relative">
+        <button onmouseover="showDropdown('insuranceMenu')" onmouseout="hideDropdown('insuranceMenu')">
+          Insurance ▾
+        </button>
+
+        <div id="insuranceMenu"
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('insuranceMenu')"
+             onmouseout="hideDropdown('insuranceMenu')">
+
+          <a href="/insurance" class="block px-4 py-2 hover:bg-gray-100">Insurance Overview</a>
+          <a href="/life-insurance" class="block px-4 py-2 hover:bg-gray-100">Life Insurance</a>
+          <a href="/health-insurance" class="block px-4 py-2 hover:bg-gray-100">Health Insurance</a>
+          <a href="/general-insurance" class="block px-4 py-2 hover:bg-gray-100">General Insurance</a>
+        </div>
+      </div>
+
+      <a href="/contact">Contact</a>
+
+    </nav>
+
+
+    <!-- MOBILE TOGGLE -->
+    <button id="mobileToggle" class="md:hidden">
+      ☰
+    </button>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav" class="hidden md:hidden bg-white border-t">
+    <div class="px-4 py-3 flex flex-col gap-2">
+
+      <a href="https://www.snehalspservices.in/">Home</a>
+      <a href="/about">About</a>
+
+      <!-- MOBILE SERVICES MENU -->
+      <button onclick="toggleMenu('servicesMenuMobile')" class="flex justify-between items-center font-semibold">
+        Services <span id="servicesMenuMobileIcon">+</span>
+      </button>
+      <div id="servicesMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+        <a href="/services">Personal Loan</a>
+        <a href="/services">Home Loan</a>
+        <a href="/services">Business Loan</a>
+        <a href="/services">Car Loan</a>
+        <a href="/services">Loan Against Property</a>
+        <a href="/services">Credit Card Assistance</a>
+        <a href="/services">Loan Against Car</a>
+        <a href="/services">Transfer Home Loan</a>
+      </div>
+
+      <!-- MOBILE INSURANCE MENU -->
+      <button onclick="toggleMenu('insuranceMenuMobile')" class="flex justify-between items-center font-semibold">
+        Insurance <span id="insuranceMenuMobileIcon">+</span>
+      </button>
+      <div id="insuranceMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+        <a href="/insurance">Insurance Overview</a>
+        <a href="/life-insurance">Life Insurance</a>
+        <a href="/health-insurance">Health Insurance</a>
+        <a href="/general-insurance">General Insurance</a>
+      </div>
+
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- Content -->
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="bg-white rounded-lg shadow p-10">
+    <h1 class="text-3xl font-bold text-center mb-8" style="color:var(--navy-900)">Terms & Conditions</h1>
+    <p><strong>Last Updated:</strong> 28 November 2025</p>
+    <p class="mt-4">By accessing or using our website <a href="https://www.snehalspservices.in" class="text-blue-700">www.snehalspservices.in</a>, you agree to follow the Terms & Conditions listed below.</p>
+
+    <h2 class="text-xl font-semibold mt-8" style="color:var(--navy-900)">About Our Services</h2>
+    <p class="mt-2">Snehal SP Services Pvt. Ltd. provides loan consultation and financial services for:</p>
+    <ul class="list-disc pl-6 mt-2">
+      <li>Personal / Business / Home Loans</li>
+      <li>Loan Against Property</li>
+      <li>Car Loans & Credit Card Services</li>
+    </ul>
+    <p class="mt-2">We are a loan service provider, not a lender. Loan approval depends on respective bank/NBFC criteria.</p>
+
+    <h2 class="text-xl font-semibold mt-8" style="color:var(--navy-900)">Loan Approval Disclaimer</h2>
+    <p class="mt-2">We do not guarantee loan approval, amount, interest rate, or disbursal time. All decisions are taken solely by lending partners.</p>
+
+    <h2 class="text-xl font-semibold mt-8" style="color:var(--navy-900)">Service Charges</h2>
+    <p class="mt-2">Processing/service charges may apply depending on loan type & documentation work. Fees are always communicated before charging.</p>
+
+    <h2 class="text-xl font-semibold mt-8" style="color:var(--navy-900)">Limitation of Liability</h2>
+    <ul class="list-disc pl-6 mt-2">
+      <li>Loan rejection by bank/NBFC</li>
+      <li>Delays due to incomplete documents</li>
+      <li>Policy changes by lending partners</li>
+      <li>Technical downtime of website</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mt-8" style="color:var(--navy-900)">Intellectual Property</h2>
+    <p class="mt-2">All content including logo, text, and graphics is the property of Snehal SP Services Pvt. Ltd. Reproduction without permission is prohibited.</p>
+
+    <h2 class="text-xl font-semibold mt-8" style="color:var(--navy-900)">Contact Us</h2>
+    <p class="mt-2">For any Terms-related questions:</p>
+    <p class="mt-1">
+      📧 <a href="mailto:prakash.kakulte@snehalspservices.in" class="text-blue-700">prakash.kakulte@snehalspservices.in</a><br />
+      📞 +91 911 200 3366
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+
+  <footer class="bg-[#001f3f] text-white pt-12 pb-6 mt-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+
+      <div>
+        <h3 class="font-semibold text-xl mb-3">Snehal SP Services Pvt. Ltd.</h3>
+        <p class="text-gray-300 text-sm leading-6">
+          We help customers with Personal, Business, Home, Mortgage & Car Loans
+          through 30+ Banks & NBFCs. Fast, transparent & trusted loan consultancy.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li><a href="https://www.snehalspservices.in/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/services" class="hover:text-white">Services</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+          <li><a href="/insurance" class="hover:text-white">Insurance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Loan Services</h4>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li>Personal Loan</li>
+          <li>Home Loan</li>
+          <li>Business Loan</li>
+          <li>Car Loan</li>
+          <li>Loan Against Property</li>
+          <li>Credit Card Assistance</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+        <p class="text-gray-300 text-sm leading-6">
+          Eldora Building, Golden City Center,<br>
+          Chikalthana, Plot No. P-79, Shop No.163,<br>
+          Aurangabad, Maharashtra 431001
+        </p>
+
+        <p class="mt-3">
+          <a href="tel:+919112003366" class="hover:text-white text-gray-300 text-sm">
+            +91 9112003366
+          </a>
+        </p>
+
+        <p class="mt-1">
+          <a href="mailto:prakash.kakulte@snehalspservices.in"
+             class="hover:text-white text-gray-300 text-sm">
+            prakash.kakulte@snehalspservices.in
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/20 mt-10 pt-4 text-center text-sm text-gray-300">
+      <span>© 2025 Snehal SP Services Pvt. Ltd.</span>
+      <span>|</span>
+
+      <a href="/privacy" class="hover:text-white">Privacy Policy</a>
+      <span>|</span>
+
+      <a href="/terms" class="hover:text-white">Terms & Conditions</a>
+      <span>|</span>
+
+      <a href="/disclaimer" class="hover:text-white">Disclaimer</a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  function showDropdown(id) {
+    document.getElementById(id)?.classList.remove("hidden");
+  }
+  function hideDropdown(id) {
+    document.getElementById(id)?.classList.add("hidden");
+  }
+
+  document.getElementById("mobileToggle").onclick = () =>
+    document.getElementById("mobileNav").classList.toggle("hidden");
+
+  function toggleMenu(id) {
+    const menu = document.getElementById(id);
+    const icon = document.getElementById(id + "Icon");
+
+    if (!menu) return;
+
+    menu.classList.toggle("hidden");
+    if (icon) icon.textContent = menu.classList.contains("hidden") ? "+" : "-";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Snehal SP Services Pvt. Ltd.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --navy-900:#001f3f;
+      --navy-800:#00305a;
+      --navy-700:#054a7a;
+    }
+    .muted{ color:#64748b; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- HEADER (Same as index) -->
+<header class="bg-white shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+    <!-- Logo + Slogan -->
+    <div>
+      <div class="font-bold text-lg" style="color:var(--navy-900)">Snehal SP Services Pvt. Ltd.</div>
+      <div class="text-xs" style="color:#00305a;opacity:0.95;font-weight:500;">
+        Smart Finance For A Better Future
+      </div>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden md:flex gap-6 text-sm" style="color:var(--navy-900)">
+      
+      <a href="https://www.snehalspservices.in/">Home</a>
+      <a href="/about">About</a>
+
+      <!-- SERVICES DROPDOWN -->
+      <div class="relative">
+        <button onmouseover="showDropdown('servicesMenu')" onmouseout="hideDropdown('servicesMenu')">
+          Services ▾
+        </button>
+
+        <div id="servicesMenu"
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('servicesMenu')"
+             onmouseout="hideDropdown('servicesMenu')">
+
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Personal Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Home Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Business Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Car Loan</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Loan Against Property</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Credit Card Assistance</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Loan Against Car</a>
+          <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Transfer Home Loan</a>
+        </div>
+      </div>
+
+      <!-- INSURANCE DROPDOWN -->
+      <div class="relative">
+        <button onmouseover="showDropdown('insuranceMenu')" onmouseout="hideDropdown('insuranceMenu')">
+          Insurance ▾
+        </button>
+
+        <div id="insuranceMenu"
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('insuranceMenu')"
+             onmouseout="hideDropdown('insuranceMenu')">
+
+          <a href="/insurance" class="block px-4 py-2 hover:bg-gray-100">Insurance Overview</a>
+          <a href="/life-insurance" class="block px-4 py-2 hover:bg-gray-100">Life Insurance</a>
+          <a href="/health-insurance" class="block px-4 py-2 hover:bg-gray-100">Health Insurance</a>
+          <a href="/general-insurance" class="block px-4 py-2 hover:bg-gray-100">General Insurance</a>
+        </div>
+      </div>
+
+      <a href="/contact">Contact</a>
+
+    </nav>
+
+
+    <!-- MOBILE TOGGLE -->
+    <button id="mobileToggle" class="md:hidden">
+      ☰
+    </button>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav" class="hidden md:hidden bg-white border-t">
+    <div class="px-4 py-3 flex flex-col gap-2">
+
+      <a href="https://www.snehalspservices.in/">Home</a>
+      <a href="/about">About</a>
+
+      <!-- MOBILE SERVICES MENU -->
+      <button onclick="toggleMenu('servicesMenuMobile')" class="flex justify-between items-center font-semibold">
+        Services <span id="servicesMenuMobileIcon">+</span>
+      </button>
+      <div id="servicesMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+        <a href="/services">Personal Loan</a>
+        <a href="/services">Home Loan</a>
+        <a href="/services">Business Loan</a>
+        <a href="/services">Car Loan</a>
+        <a href="/services">Loan Against Property</a>
+        <a href="/services">Credit Card Assistance</a>
+        <a href="/services">Loan Against Car</a>
+        <a href="/services">Transfer Home Loan</a>
+      </div>
+
+      <!-- MOBILE INSURANCE MENU -->
+      <button onclick="toggleMenu('insuranceMenuMobile')" class="flex justify-between items-center font-semibold">
+        Insurance <span id="insuranceMenuMobileIcon">+</span>
+      </button>
+      <div id="insuranceMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+        <a href="/insurance">Insurance Overview</a>
+        <a href="/life-insurance">Life Insurance</a>
+        <a href="/health-insurance">Health Insurance</a>
+        <a href="/general-insurance">General Insurance</a>
+      </div>
+
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-gray-50 py-16 shadow">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h1 class="text-3xl font-bold mb-3" style="color:var(--navy-900)">About Us</h1>
+    <p class="text-gray-600 max-w-3xl mx-auto">
+      Your trusted partner for Loans, Insurance & Financial Solutions across India.
+    </p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="max-w-6xl mx-auto px-4 py-12">
+
+  <!-- Company Introduction -->
+  <h2 class="text-2xl font-bold mb-3" style="color:var(--navy-900)">About Snehal SP Services</h2>
+  <p class="text-gray-700 mb-8 leading-7">
+    Snehal SP Services Pvt. Ltd. helps customers across Aurangabad and India access tailored loan options from multiple reputed lenders. We simplify documentation, speed up application processing and negotiate the best offers so you save on EMIs.
+  </p>
+
+  <!-- Mission & Values -->
+  <h2 class="text-2xl font-bold mb-3" style="color:var(--navy-900)">Mission & Values</h2>
+  <ul class="list-disc pl-6 mb-8 text-gray-700 leading-7">
+    <li>Deliver trusted and transparent financial services</li>
+    <li>Provide quick and hassle-free loan processing</li>
+    <li>Ensure customer-first assistance for every requirement</li>
+    <li>Build long-term relationships through honesty & reliability</li>
+  </ul>
+
+  <!-- Why Choose Us -->
+  <h2 class="text-2xl font-bold mb-3" style="color:var(--navy-900)">Why Choose Us?</h2>
+  <div class="grid md:grid-cols-3 gap-6 mb-12">
+    <div class="bg-white shadow p-6 rounded-lg">
+      <h3 class="font-semibold text-lg mb-2">30+ Lenders</h3>
+      <p class="text-gray-600 text-sm">Wide bank network for best options.</p>
+    </div>
+
+    <div class="bg-white shadow p-6 rounded-lg">
+      <h3 class="font-semibold text-lg mb-2">Fast Approvals</h3>
+      <p class="text-gray-600 text-sm">Quick & smooth loan process.</p>
+    </div>
+
+    <div class="bg-white shadow p-6 rounded-lg">
+      <h3 class="font-semibold text-lg mb-2">15000+ Happy Customers</h3>
+      <p class="text-gray-600 text-sm">Trusted by families across India.</p>
+    </div>
+  </div>
+
+  <!-- Company Details -->
+  <div class="bg-white p-6 shadow rounded-lg">
+    <h3 class="font-semibold text-lg mb-2" style="color:var(--navy-900)">Company Details</h3>
+    <p class="text-sm muted">
+      Eldora Building, Golden City Center, Chikalthana, Aurangabad, Maharashtra 431001
+    </p>
+    <p class="mt-2 text-sm">Phone: +91 9112003366</p>
+    <p class="text-sm">Email: prakash.kakulte@snehalspservices.in</p>
+    <p class="mt-3 text-xs muted">We follow strict privacy standards — your data is shared only with lenders after your consent.</p>
+  </div>
+
+</section>
+
+<!-- Footer -->
+
+  <footer class="bg-[#001f3f] text-white pt-12 pb-6 mt-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+
+      <div>
+        <h3 class="font-semibold text-xl mb-3">Snehal SP Services Pvt. Ltd.</h3>
+        <p class="text-gray-300 text-sm leading-6">
+          We help customers with Personal, Business, Home, Mortgage & Car Loans
+          through 30+ Banks & NBFCs. Fast, transparent & trusted loan consultancy.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li><a href="https://www.snehalspservices.in/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/services" class="hover:text-white">Services</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+          <li><a href="/insurance" class="hover:text-white">Insurance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Loan Services</h4>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li>Personal Loan</li>
+          <li>Home Loan</li>
+          <li>Business Loan</li>
+          <li>Car Loan</li>
+          <li>Loan Against Property</li>
+          <li>Credit Card Assistance</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+        <p class="text-gray-300 text-sm leading-6">
+          Eldora Building, Golden City Center,<br>
+          Chikalthana, Plot No. P-79, Shop No.163,<br>
+          Aurangabad, Maharashtra 431001
+        </p>
+
+        <p class="mt-3">
+          <a href="tel:+919112003366" class="hover:text-white text-gray-300 text-sm">
+            +91 9112003366
+          </a>
+        </p>
+
+        <p class="mt-1">
+          <a href="mailto:prakash.kakulte@snehalspservices.in"
+             class="hover:text-white text-gray-300 text-sm">
+            prakash.kakulte@snehalspservices.in
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/20 mt-10 pt-4 text-center text-sm text-gray-300">
+      <span>© 2025 Snehal SP Services Pvt. Ltd.</span>
+      <span>|</span>
+
+      <a href="/privacy" class="hover:text-white">Privacy Policy</a>
+      <span>|</span>
+
+      <a href="/terms" class="hover:text-white">Terms & Conditions</a>
+      <span>|</span>
+
+      <a href="/disclaimer" class="hover:text-white">Disclaimer</a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scripts -->
+
+<script>
+  function showDropdown(id) {
+    document.getElementById(id)?.classList.remove("hidden");
+  }
+  function hideDropdown(id) {
+    document.getElementById(id)?.classList.add("hidden");
+  }
+
+  function toggleMenu(id) {
+    const menu = document.getElementById(id);
+    const icon = document.getElementById(id + "Icon");
+
+    if (!menu) return;
+
+    menu.classList.toggle("hidden");
+    if (icon) icon.textContent = menu.classList.contains("hidden") ? "+" : "-";
+  }
+
+  document.getElementById("mobileToggle").onclick = () => {
+  document.getElementById("mobileNav").classList.toggle("hidden");
+};
+</script>
+
+</body>
+</html>
