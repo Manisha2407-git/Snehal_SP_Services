@@ -708,10 +708,10 @@ header .text-xs.muted {
         <input name="city" placeholder="City" class="p-3 border rounded" />
         <input name="amount" placeholder="Loan Amount Required (₹)" class="p-3 border rounded" />
         <div class="md:col-span-2">
-          <label class="text-sm muted">By submitting this form, you agree to the <a href="privacy.html" target="_blank" rel="noopener" style="color:var(--navy-800); text-decoration:underline;">
+          <label class="text-sm muted">By submitting this form, you agree to the <a href="/privacy" target="_blank" rel="noopener" style="color:var(--navy-800); text-decoration:underline;">
            Privacy Policy
           &amp;
-           <a href="terms.html" target="_blank" rel="noopener" style="color:var(--navy-800); text-decoration:underline;">
+           <a href="/terms" target="_blank" rel="noopener" style="color:var(--navy-800); text-decoration:underline;">
           Terms of Use
            </a>
          </label>
@@ -727,9 +727,6 @@ header .text-xs.muted {
     const el = document.getElementById(id);
     if(!el) return;
     el.classList.toggle('hidden');
-  }
-  function scrollToServices(){
-    document.getElementById('services').scrollIntoView({behavior:'smooth'});
   }
 
   // mobile nav toggle
