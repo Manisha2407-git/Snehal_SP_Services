@@ -174,34 +174,38 @@ header .text-xs.muted {
 
 <body class="antialiased text-gray-800 bg-white">
 
-  <!-- HEADER (Same as index) -->
-<header class="bg-white shadow sticky top-0 z-40">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+ <!-- HEADER -->
+<header class="bg-white shadow sticky top-0 z-50">
 
-    <!-- Logo + Slogan -->
-    <div>
-      <div class="font-bold text-lg" style="color:var(--navy-900)">Snehal SP Services Pvt. Ltd.</div>
-      <div class="text-xs" style="color:#00305a;opacity:0.95;font-weight:500;">
-        Smart Finance For A Better Future
-      </div>
-    </div>
+  <!-- HEADER BAR -->
+  <div class="max-w-7xl mx-auto px-4 h-20 md:h-24 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center -mt-1">
+  <img
+    src="assets/logo.png"
+    alt="Snehal SP Services Pvt. Ltd."
+    class="h-16 sm:h-18 md:h-20 max-w-[380px] w-auto object-contain"
+  />
+</a>
 
     <!-- DESKTOP NAV -->
-    <nav class="hidden md:flex gap-6 text-sm font-medium text-[var(--navy-900)]">
-      
-      <a href="https://www.snehalspservices.in/">Home</a>
-      <a href="/about">About</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--navy-900)]">
 
-      <!-- SERVICES DROPDOWN -->
-      <div class="relative">
-        <button onmouseover="showDropdown('servicesMenu')" onmouseout="hideDropdown('servicesMenu')">
+      <a href="/" class="hover:text-[var(--navy-700)]">Home</a>
+      <a href="/about" class="hover:text-[var(--navy-700)]">About</a>
+
+      <!-- SERVICES -->
+      <div class="relative"
+           onmouseenter="showDropdown('servicesMenu')"
+           onmouseleave="hideDropdown('servicesMenu')">
+
+        <button class="flex items-center gap-1 hover:text-[var(--navy-700)]">
           Services ▾
         </button>
 
         <div id="servicesMenu"
-             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
-             onmouseover="showDropdown('servicesMenu')"
-             onmouseout="hideDropdown('servicesMenu')">
+             class="absolute left-0 top-full mt-2 hidden bg-white shadow-lg w-60 rounded-lg py-2">
 
           <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Personal Loan</a>
           <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Home Loan</a>
@@ -214,16 +218,17 @@ header .text-xs.muted {
         </div>
       </div>
 
-      <!-- INSURANCE DROPDOWN -->
-      <div class="relative">
-        <button onmouseover="showDropdown('insuranceMenu')" onmouseout="hideDropdown('insuranceMenu')">
+      <!-- INSURANCE -->
+      <div class="relative"
+           onmouseenter="showDropdown('insuranceMenu')"
+           onmouseleave="hideDropdown('insuranceMenu')">
+
+        <button class="flex items-center gap-1 hover:text-[var(--navy-700)]">
           Insurance ▾
         </button>
 
         <div id="insuranceMenu"
-             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
-             onmouseover="showDropdown('insuranceMenu')"
-             onmouseout="hideDropdown('insuranceMenu')">
+             class="absolute left-0 top-full mt-2 hidden bg-white shadow-lg w-56 rounded-lg py-2">
 
           <a href="/insurance" class="block px-4 py-2 hover:bg-gray-100">Insurance Overview</a>
           <a href="/life-insurance" class="block px-4 py-2 hover:bg-gray-100">Life Insurance</a>
@@ -232,29 +237,29 @@ header .text-xs.muted {
         </div>
       </div>
 
-      <a href="/contact">Contact</a>
-
+      <a href="/contact" class="hover:text-[var(--navy-700)]">Contact</a>
     </nav>
 
-
-    <!-- MOBILE TOGGLE -->
-    <button id="mobileToggle" class="md:hidden">
+    <!-- MOBILE MENU BUTTON -->
+    <button id="mobileToggle"
+            class="md:hidden text-2xl font-bold text-[var(--navy-900)] p-2 rounded hover:bg-gray-100">
       ☰
     </button>
   </div>
 
   <!-- MOBILE NAV -->
   <div id="mobileNav" class="hidden md:hidden bg-white border-t">
-    <div class="px-4 py-3 flex flex-col gap-2">
+    <div class="px-4 py-4 flex flex-col gap-3 text-sm">
 
-      <a href="https://www.snehalspservices.in/">Home</a>
-      <a href="/about">About</a>
+      <a href="/" class="py-1">Home</a>
+      <a href="/about" class="py-1">About</a>
 
-      <!-- MOBILE SERVICES MENU -->
-      <button onclick="toggleMenu('servicesMenuMobile')" class="flex justify-between items-center font-noraml">
+      <!-- MOBILE SERVICES -->
+      <button onclick="toggleMenu('servicesMenuMobile')" class="flex justify-between items-center">
         Services <span id="servicesMenuMobileIcon">+</span>
       </button>
-      <div id="servicesMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+
+      <div id="servicesMenuMobile" class="hidden pl-4 flex flex-col gap-2 text-gray-700">
         <a href="/services">Personal Loan</a>
         <a href="/services">Home Loan</a>
         <a href="/services">Business Loan</a>
@@ -265,20 +270,22 @@ header .text-xs.muted {
         <a href="/services">Transfer Home Loan</a>
       </div>
 
-      <!-- MOBILE INSURANCE MENU -->
-      <button onclick="toggleMenu('insuranceMenuMobile')" class="flex justify-between items-center font-normal">
+      <!-- MOBILE INSURANCE -->
+      <button onclick="toggleMenu('insuranceMenuMobile')" class="flex justify-between items-center">
         Insurance <span id="insuranceMenuMobileIcon">+</span>
       </button>
-      <div id="insuranceMenuMobile" class="hidden pl-4 flex flex-col gap-1 text-gray-700">
+
+      <div id="insuranceMenuMobile" class="hidden pl-4 flex flex-col gap-2 text-gray-700">
         <a href="/insurance">Insurance Overview</a>
         <a href="/life-insurance">Life Insurance</a>
         <a href="/health-insurance">Health Insurance</a>
         <a href="/general-insurance">General Insurance</a>
       </div>
 
-      <a href="/contact">Contact</a>
+      <a href="/contact" class="py-1">Contact</a>
     </div>
   </div>
+
 </header>
 
   <!-- Hero -->
