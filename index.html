@@ -196,16 +196,15 @@ header .text-xs.muted {
       <a href="/about" class="hover:text-[var(--navy-700)]">About</a>
 
       <!-- SERVICES -->
-      <div class="relative"
-           onmouseenter="showDropdown('servicesMenu')"
-           onmouseleave="hideDropdown('servicesMenu')">
-
-        <button class="flex items-center gap-1 hover:text-[var(--navy-700)]">
+      <div class="relative">
+        <button onmouseover="showDropdown('servicesMenu')" onmouseout="hideDropdown('servicesMenu')">
           Services ▾
         </button>
 
         <div id="servicesMenu"
-             class="absolute left-0 top-full mt-2 hidden bg-white shadow-lg w-60 rounded-lg py-2">
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('servicesMenu')"
+             onmouseout="hideDropdown('servicesMenu')">
 
           <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Personal Loan</a>
           <a href="/services" class="block px-4 py-2 hover:bg-gray-100">Home Loan</a>
@@ -219,16 +218,15 @@ header .text-xs.muted {
       </div>
 
       <!-- INSURANCE -->
-      <div class="relative"
-           onmouseenter="showDropdown('insuranceMenu')"
-           onmouseleave="hideDropdown('insuranceMenu')">
-
-        <button class="flex items-center gap-1 hover:text-[var(--navy-700)]">
+      <div class="relative">
+        <button onmouseover="showDropdown('insuranceMenu')" onmouseout="hideDropdown('insuranceMenu')">
           Insurance ▾
         </button>
 
         <div id="insuranceMenu"
-             class="absolute left-0 top-full mt-2 hidden bg-white shadow-lg w-56 rounded-lg py-2">
+             class="absolute hidden bg-white shadow-lg w-56 rounded-lg py-2 z-50"
+             onmouseover="showDropdown('insuranceMenu')"
+             onmouseout="hideDropdown('insuranceMenu')">
 
           <a href="/insurance" class="block px-4 py-2 hover:bg-gray-100">Insurance Overview</a>
           <a href="/life-insurance" class="block px-4 py-2 hover:bg-gray-100">Life Insurance</a>
